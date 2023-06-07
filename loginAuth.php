@@ -22,7 +22,7 @@ if ($stmt) {
 		if (password_verify($password . $salt, $hash) == 1) {
 			session_start();
 			$_SESSION['id'] = $id;
-			header('Location: ./index.html');
+			header('Location: ./index.php');
 		}
 	} else {
 		echo "No results found.";
