@@ -18,11 +18,11 @@ if ($stmt) {
 	mysqli_stmt_bind_param($stmt, "s", $eMail);
 	mysqli_stmt_execute($stmt);
 	mysqli_stmt_bind_result($stmt, $id, $hash, $salt);
-
 	if (mysqli_stmt_fetch($stmt)) {
 		if (password_verify($password . $salt, $hash) == 1) {
 			session_start();
 			$_SESSION['id'] = $id;
+			header('Location: ./index.html');
 		}
 	} else {
 		echo "No results found.";
