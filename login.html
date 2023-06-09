@@ -35,31 +35,35 @@
 				</div>
 			</div>
 		</nav>
-		<form action="loginAuth.php" method="post">
-			<div class="field">
-				<label class="label">E-mail</label>
-				<p class="control has-icons-left has-icons-right">
-					<input class="input" type="email" placeholder="Email" name="eMail" />
-					<span class="icon is-small is-left">
-						<i class="fas fa-envelope"></i>
-					</span>
-				</p>
+		<section class="section has-background-light margin-inlog">
+			<div class="container is-primary">
+				<div class="columns is-vcentered">
+					<div class="column is-12">
+						<div class="notification tekst-center">
+							<form action="loginAuth.php" method="post">
+								<h1 class="size-4 title">Log-In</h1>
+								<div class="field">
+									<p class="control">
+										<input class="input inp-width" type="email" placeholder="Email" name="eMail" />
+									</p>
+								</div>
+								<div class="field">	
+									<p class="control">
+										<input class="input inp-width" type="password" placeholder="Password" name="pWord" />
+									</p>
+								</div>
+								<div class="field is-grouped flex-dis">
+									<p class="control">
+										<input class="button is-primary is-success" name="login" type="submit" value="login"><br>
+									</p>
+								</div>
+								<a href="./register.html" style="margin-top: 2%;">Geen account? Maak hier een account aan!</a>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="field">
-				<label class="label">Password</label>
-				<p class="control has-icons-left">
-					<input class="input" type="password" placeholder="Password" name="pWord" />
-					<span class="icon is-small is-left">
-						<i class="fas fa-lock"></i>
-					</span>
-				</p>
-			</div>
-			<div class="field">
-				<p class="control">
-					<button class="button is-success"><input type="submit" />Login</button>
-				</p>
-			</div>
-		</form>
+		</section>
 	</body>
 	<script src="./js/BulmaHamburgToggle.js"></script>
 </html>
