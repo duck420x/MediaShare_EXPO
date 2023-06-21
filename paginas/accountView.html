@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+		<link rel="stylesheet" href="../style/style.css" />
+	</head>
+	<body>
+<!-- NAV-BAR -->
+		<nav class="navbar has-background-light p-1">
+			<div class="navbar-brand">
+				<logo class="nav-item logo">
+    <!-- //-- Mogelijkheid voor logo --// -->
+					<img
+						src="../images/NoBgLogoRemake.svg"
+						alt="Logo"
+						style="max-height: 70px"
+						class="p-2 shadow"
+					/>
+				</logo>
+    <!-- //-- Hamburger voor mobiele navbar --// -->
+				<burger class="navbar-burger" id="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</burger>
+			</div>
+			<div class="navbar-menu is-12 r-0" id="nav-links">
+    <!-- //-- 'start' ipv 'end' is om de 'items' direct naast de logo te krijgen --// -->
+				<div class="navbar-end pr-5">
+					<a href="" class="navbar-item">pagina1</a>
+					<a href="" class="navbar-item">pagina2</a>
+					<a href="" class="navbar-item">pagina3</a>
+				</div>
+			</div>
+		</nav>
+<!-- MAIN -->
+    <!-- SECTION -->
+		<section class="hero is-primary is-xs box ">
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+                      <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                            <span class="navbar-item">
+                                <a class="button is-primary is-inverted">
+                                  <span>New Post</span>
+                                </a>
+                              </span>
+                          <a class="navbar-item">
+                            Activity
+                          </a>
+                          <a class="navbar-item">
+                            <i class="fa-solid fa-user fa-xl"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+            </div>
+			<div class="hero-body" style="padding-top: 2%;margin: 0% 12%;">
+                <input class="input is-info tekst-center" type="text" placeholder="Search">
+                <!-- BOX-BEGIN -->
+                <div class="container">
+                    <div class="box mt-6">
+                        <div class="columns is-multiline has-text-centered">
+                            <div class="column is-full">
+                                <strong><label>Profiel van <!---USER-----> </label></strong> <br><br>
+                            </div>
+                           <div class="column is-3 ProfielView">
+                                <figure class="image is-128x128">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                                </figure></div>
+                           <div class="column is-9">
+                            <div class="columns is-multiline">
+                                <div class="column is-4"><p>Posts:</p> <p>4</p></div>
+                                <div class="column is-4"><p></p>Followers:</p> <p>65</p></div>
+                                <div class="column is-4"><p></p>Following:</p> <p>33</p></div>
+                            </div>
+                           </div>
+                           <div class="column is-full">
+                            <div class="button is-info accButton">Posts</div>
+                            <div class="button is-info accButton">Follow</div>
+                        </div>
+                        </div>
+                    </div>
+		</section>
+		<footer class="footer footer-top">
+			<div class="content has-text-centered">
+				<p>
+					This project is made by <strong>Oliver Boros</strong> and <strong>Stefano Ceoldo</strong>. This code is copyrighted. The website is supported by
+					<a href="https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=1ad0a931-a3e3-45c7-a778-cc53892ada3e&redirect_uri=https%3A%2F%2Fwww.mijnglr.nl%2Fsignin&response_type=code%20id_token&scope=openid%20profile&response_mode=form_post&nonce=638112711931803934.MjljZTlmMDYtZmY5NS00ZTVmLWEwZGUtOTczZjgyYzFkYTllMDNhZmI1ZmMtZGM1Yy00ZGI4LWE0NjgtZmEwOTk0NDlmZDg4&state=CfDJ8OMhQ234PsRDsOycIzXucd_z7w2UIY4NtiLPUjaEWdphejwbMpIwgJGUUip4bTEu6CZFjNPtbTEFX3dhx2BMEdIabW7xjbs-EPiy8zn3WFTOb0-PfLdRj7HE1dg4m8I8jlkyl4OFkkNFK7ue2IhqXvyh7EX1uJNpMT4bEs4n66J7Z_74RNwSidJky2gM_LtbQH5HV2J35LFt6R8gXR3MSUd0_b3pSwxsL6PxRlj3dKx2VE-G9yxealqECef6FmuRw9CCGR7TT4-8H2y2xxJjn5ML5ykmAyTMDd6gqG7Bs7aw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=5.5.0.0">Grafisch Lyceum Rotterdam</a>.
+				</p>
+			</div>
+		</footer>
+	</body>
+    <script src="https://kit.fontawesome.com/1f8796d395.js" crossorigin="anonymous"></script>
+	<script src="../js/BulmaHamburgToggle.js"></script>
+</html>
