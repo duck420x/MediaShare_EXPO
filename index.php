@@ -56,10 +56,9 @@ include "./loginCheck.php";
 									<span>New Post</span>
 								</a>
 							</span>
-							<a class="navbar-item"> Activity </a>
 							<a class="navbar-item">
-								<i class="fa-solid fa-user fa-xl"></i>
-							</a>
+                            Account
+                          </a>
 						</div>
 					</div>
 				</div>
@@ -134,50 +133,7 @@ include "./loginCheck.php";
 
 			</div>
 
-			<!-- <div class="container has-text-centered">
-				<div class="box mt-6">
-					<div class="columns">
-						<div class="column is-11 content-image">
-							<img src="" class="image" alt="Post" />
-						</div>
-						<div class="column is-1">
-							<div class="columns is-vcentered is-multiline">
-								<div class="column is-12">
-									<div class="notification">
-										<i class="fa-solid fa-arrow-up fa-xl"></i>
-									</div>
-								</div>
-								<div class="column is-12">
-									<div class="notification">
-										<i class="fa-solid fa-arrow-down fa-xl"></i>
-									</div>
-								</div>
-								<div class="column is-12">
-									<div class="notification">
-										<i class="fa-regular fa-comment fa-xl"></i>
-									</div>
-								</div>
-								<div class="column is-12">
-									<div class="notification">
-										<i class="fa-sharp fa-regular fa-hashtag fa-xl"></i>
-									</div>
-								</div>
-								<div class="column is-12">
-									<div class="notification">
-										<i class="fa-solid fa-user fa-xl"></i>
-									</div>
-								</div>
-								<div class="column is-12">
-									<div class="notification">
-										<i class="fa-solid fa-ellipsis fa-xl"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
-
+			
 		</div>
 	</section>
 	<footer class="footer footer-top">

@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Followers</title>
+		<title>Post</title>
 		<link rel="stylesheet" href="../style/style.css" />
 	</head>
 	<body>
@@ -30,9 +30,7 @@
 			<div class="navbar-menu is-12 r-0" id="nav-links">
     <!-- //-- 'start' ipv 'end' is om de 'items' direct naast de logo te krijgen --// -->
 				<div class="navbar-end pr-5">
-					<a href="" class="navbar-item">pagina1</a>
-					<a href="" class="navbar-item">pagina2</a>
-					<a href="" class="navbar-item">pagina3</a>
+					<a href="" class="navbar-item">logOut</a>
 				</div>
 			</div>
 		</nav>
@@ -50,16 +48,14 @@
                       <div id="navbarMenuHeroA" class="navbar-menu">
                         <div class="navbar-end">
                             <span class="navbar-item">
-                                <a class="button is-primary is-inverted">
+                              <a class="button is-primary is-inverted" href="./upload.php">
                                   <span>New Post</span>
                                 </a>
                               </span>
-                          <a class="navbar-item">
-                            Activity
-                          </a>
-                          <a class="navbar-item">
-                            <i class="fa-solid fa-user fa-xl"></i>
-                          </a>
+                              <!-- GELINKT WORDEN naar account -->
+                              <a class="navbar-item" href=" ">
+                                <i class="fa-solid fa-user fa-xl"></i>
+                              </a>
                         </div>
                       </div>
                     </div>
@@ -68,94 +64,35 @@
             </div>
 			<div class="hero-body" style="padding-top: 2%;margin: 0% 12%;">
                 <!-- BOX-BEGIN -->
+            	<form action="post.php" method="post" enctype="multipart/form-data">
                 <div class="container">
                     <div class="box mt-7">
                       <div class='container'>
                         <div class='columns is-mobile is-centered'>
-                          <div class='column is-12'>
-                            <div>
-                              <h1 class='title has-text-black'>Comments</h1>
-                              <hr>
-                            </div>
-                            <table class='table followList'>
-                              <tbody class="followUsers">
-                                <tr>
-                                  <td>
-                                    <div class="columns is-12 is-multiline">
-                                        <!-- USERNAME: -->
-                                        <div class="column is-2">
-                                            <p>Jan De Vries:</p>
-                                        </div>
-                                        <!-- COMMENT -->
-                                        <div class="column is-10">
-                                            <p>Banaan is beter dan kaas</p>
-                                        </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>
-                                    <div class="columns is-12 is-multiline">
-                                        <!-- USERNAME: -->
-                                        <div class="column is-2">
-                                            <p>YoungDoef:</p>
-                                        </div>
-                                        <!-- COMMENT -->
-                                        <div class="column is-10">
-                                            <p>Slegte video, zet die ding uit...</p>
-                                        </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>
-                                    <div class="columns is-12 is-multiline">
-                                        <!-- USERNAME: -->
-                                        <div class="column is-2">
-                                            <p>Cristiano Ronaldo:</p>
-                                        </div>
-                                        <!-- COMMENT -->
-                                        <div class="column is-10">
-                                            <p>Ik ben beter dan messi</p>
-                                        </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>saimi875</td>
-                                </tr>
-                     
-                                <tr>
-                                </tr>
-                     
-                                <tr>
-                                  <td>riya665</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>raja222</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>kunal456</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>diwakar686</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>nupur898</td>
-                                </tr>
-                              </tbody>
-                            </table>
+                          <div class='column is-12 uploadFile'>
+                            <div class="file has-name is-boxed flex-dis is-info">
+                                <label class="file-label">
+                                  <input class="file-input" type="file" name="picture">
+                                  <span class="file-cta">
+                                    <span class="file-icon">
+                                      <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                      Choose a file…
+                                    </span>
+                                  </span>
+                                  <span class="file-name">
+                                    Screen Shot 2017-07-29 at 15.54.25.png
+                                  </span>
+                                </label>
+                              </div>
+                              <!-- GELINKT WORDEN naar upload -->
+                              <button class="button is-primary uploadBTN">upload</button>
                           </div>
                         </div>
                       </div>
                 </div>
+            </form>
             </div>
 		</section>
 		<footer class="footer footer-top">

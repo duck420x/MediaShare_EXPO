@@ -66,4 +66,12 @@
 
 .likesHome:hover {
   background-color: aqua;
+}
+
+.uploadFile {
+  display: inline-grid;
+}
+
+.uploadBTN {
+  margin: 2% 40%;
 }/*# sourceMappingURL=style.css.map */

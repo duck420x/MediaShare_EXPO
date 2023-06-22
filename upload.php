@@ -1,29 +1,109 @@
-<?php
-require_once "./loginCheck.php";
-?>
-
 <!DOCTYPE html>
-<html>
-
-<head>
-	<title>Upload a Picture</title>
-</head>
-
-<body>
-	<h1>Upload a Picture</h1>
-	<form action="post.php" method="post" enctype="multipart/form-data">
-		<label for="title">Title: </label>
-		<input type="text" name="title" /><br /><br />
-
-		<label for="title">Text: </label>
-		<textarea name="text" cols="30" rows="10"></textarea><br /><br />
-
-		<label for="title">Picture: </label>
-		<input type="file" name="picture" /><br /><br />
-
-		<br />
-		<input type="submit" value="Upload" />
-	</form>
-</body>
-
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Post</title>
+		<link rel="stylesheet" href="../style/style.css" />
+	</head>
+	<body>
+<!-- NAV-BAR -->
+		<nav class="navbar has-background-light p-1">
+			<div class="navbar-brand">
+				<logo class="nav-item logo">
+    <!-- //-- Mogelijkheid voor logo --// -->
+					<img
+						src="../images/NoBgLogoRemake.svg"
+						alt="Logo"
+						style="max-height: 70px"
+						class="p-2 shadow"
+					/>
+				</logo>
+    <!-- //-- Hamburger voor mobiele navbar --// -->
+				<burger class="navbar-burger" id="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</burger>
+			</div>
+			<div class="navbar-menu is-12 r-0" id="nav-links">
+    <!-- //-- 'start' ipv 'end' is om de 'items' direct naast de logo te krijgen --// -->
+				<div class="navbar-end pr-5">
+					<a href="" class="navbar-item">pagina1</a>
+					<a href="" class="navbar-item">pagina2</a>
+					<a href="" class="navbar-item">pagina3</a>
+				</div>
+			</div>
+		</nav>
+<!-- MAIN -->
+    <!-- SECTION -->
+		<section class="hero is-primary is-xs box ">
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+                      <div class="navbar-brand">
+                        <a class="navbar-item">
+                          <input class="input is-info tekst-center" type="text" placeholder="Search" style="width: 66vw;">
+                        </a>
+                      </div>
+                      <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                            <span class="navbar-item">
+                                <a class="button is-primary is-inverted">
+                                  <span>New Post</span>
+                                </a>
+                              </span>
+                              <a class="navbar-item" href="./ownAccount.html">
+                            <i class="fa-solid fa-user fa-xl"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+            </div>
+			<div class="hero-body" style="padding-top: 2%;margin: 0% 12%;">
+                <!-- BOX-BEGIN -->
+            	<form action="post.php" method="post" enctype="multipart/form-data">
+                <div class="container">
+                    <div class="box mt-7">
+                      <div class='container'>
+                        <div class='columns is-mobile is-centered'>
+                          <div class='column is-12 uploadFile'>
+                            <div class="file has-name is-boxed flex-dis is-info">
+                                <label class="file-label">
+                                  <input class="file-input" type="file" name="picture">
+                                  <span class="file-cta">
+                                    <span class="file-icon">
+                                      <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                      Choose a file…
+                                    </span>
+                                  </span>
+                                  <span class="file-name">
+                                    Screen Shot 2017-07-29 at 15.54.25.png
+                                  </span>
+                                </label>
+                              </div>
+                              <button class="button is-primary uploadBTN">upload</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </form>
+            </div>
+		</section>
+		<footer class="footer footer-top">
+			<div class="content has-text-centered">
+				<p>
+					This project is made by <strong>Oliver Boros</strong> and <strong>Stefano Ceoldo</strong>. This code is copyrighted. The website is supported by
+					<a href="https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=1ad0a931-a3e3-45c7-a778-cc53892ada3e&redirect_uri=https%3A%2F%2Fwww.mijnglr.nl%2Fsignin&response_type=code%20id_token&scope=openid%20profile&response_mode=form_post&nonce=638112711931803934.MjljZTlmMDYtZmY5NS00ZTVmLWEwZGUtOTczZjgyYzFkYTllMDNhZmI1ZmMtZGM1Yy00ZGI4LWE0NjgtZmEwOTk0NDlmZDg4&state=CfDJ8OMhQ234PsRDsOycIzXucd_z7w2UIY4NtiLPUjaEWdphejwbMpIwgJGUUip4bTEu6CZFjNPtbTEFX3dhx2BMEdIabW7xjbs-EPiy8zn3WFTOb0-PfLdRj7HE1dg4m8I8jlkyl4OFkkNFK7ue2IhqXvyh7EX1uJNpMT4bEs4n66J7Z_74RNwSidJky2gM_LtbQH5HV2J35LFt6R8gXR3MSUd0_b3pSwxsL6PxRlj3dKx2VE-G9yxealqECef6FmuRw9CCGR7TT4-8H2y2xxJjn5ML5ykmAyTMDd6gqG7Bs7aw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=5.5.0.0">Grafisch Lyceum Rotterdam</a>.
+				</p>
+			</div>
+		</footer>
+	</body>
+    <script src="https://kit.fontawesome.com/1f8796d395.js" crossorigin="anonymous"></script>
+	<script src="../js/BulmaHamburgToggle.js"></script>
 </html>

@@ -30,9 +30,7 @@
 			<div class="navbar-menu is-12 r-0" id="nav-links">
     <!-- //-- 'start' ipv 'end' is om de 'items' direct naast de logo te krijgen --// -->
 				<div class="navbar-end pr-5">
-					<a href="" class="navbar-item">pagina1</a>
-					<a href="" class="navbar-item">pagina2</a>
-					<a href="" class="navbar-item">pagina3</a>
+					<a href="" class="navbar-item">LogOut</a>
 				</div>
 			</div>
 		</nav>
@@ -50,16 +48,14 @@
                       <div id="navbarMenuHeroA" class="navbar-menu">
                         <div class="navbar-end">
                             <span class="navbar-item">
-                                <a class="button is-primary is-inverted">
+                              <a class="button is-primary is-inverted" href="./upload.php">
                                   <span>New Post</span>
                                 </a>
                               </span>  
-                          <a class="navbar-item">
-                            Activity
-                          </a>
-                          <a class="navbar-item">
-                            <i class="fa-solid fa-user fa-xl"></i>
-                          </a>
+                              <!-- GELINKT WORDEN naar account-->
+                              <a class="navbar-item" href=" ">
+                                <i class="fa-solid fa-user fa-xl"></i>
+                              </a>
                         </div>
                       </div>
                     </div>
@@ -72,10 +68,7 @@
                 <div class="container">
                     <div class="box mt-6">
                         <div class="columns is-multiline has-text-centered">
-                          <div class="column is-3">
-                            Naam
-                          </div>
-                            <div class="column is-9">
+                            <div class="column is-12">
                                 <strong><label>Profiel van: @<!---USER-----> </label></strong> <br><br>
                             </div>
                            <div class="column is-3 ProfielView">
@@ -87,8 +80,9 @@
                            <div class="column is-9">
                                 <div class="columns is-multiline">
                                     <div class="column is-4"><p>Posts:</p> <strong><p>4</p></strong></div>
-                                    <div class="column is-4"><p></p>Followers:</p> <strong><p>65</p></strong></div>
-                                    <div class="column is-4"><p></p>Following:</p> <strong><p>33</p></strong></div>
+                                    <!-- GELINKT WORDEN naar following en followers-->
+                                    <a class="column is-4" href=" "><p></p>Followers:</p> <strong><p>65</p></strong></a>
+                                    <a class="column is-4" href=" "><p></p>Following:</p> <strong><p>33</p></strong></a>
                                     <div class="column is-12">
                                       <div class="button is-success accButton" style="padding: 0 30%;">Edit</div>
                                       <!-- DIT TOEVOEGEN WANNER ACOOUNT AL GEVOLGD WORD: <div class="button is-success" title="Disabled button" disabled>Following</div> -->
@@ -96,40 +90,40 @@
                                     </div>
                                 </div>
                            </div>
-                           <!-- BIOGRAPHY -->
                         <!-- FOTOS van Gebruiker -->
+                        <!-- GELINKT WORDEN naar posts van gebruiker -->
                         <div class="columns is is-multiline is-12">
-                            <div class="column is-4">
+                              <a class="column is-4" href="">
                                 <figure class="image is-1by1">
                                     <img src="https://bulma.io/images/placeholders/480x480.png">
-                                  </figure>
-                            </div>
-                            <div class="column is-4">
+                                </figure>
+                              </a>
+                              <a class="column is-4" href="">
                                 <figure class="image is-1by1">
                                     <img src="https://bulma.io/images/placeholders/480x480.png">
-                                  </figure>
-                            </div>
-                            <div class="column is-4">
+                                </figure>
+                              </a>
+                              <a class="column is-4" href="">
                                 <figure class="image is-1by1">
                                     <img src="https://bulma.io/images/placeholders/480x480.png">
-                                  </figure>
-                            </div>
+                                </figure>
+                              </a>
                             <!-- HELFT -->
-                            <div class="column is-4">
+                            <a class="column is-4" href="">
                                 <figure class="image is-1by1">
                                     <img src="https://bulma.io/images/placeholders/480x480.png">
                                   </figure>
-                            </div>
-                            <div class="column is-4">
+                            </a>
+                            <a class="column is-4" href="">
                                 <figure class="image is-1by1">
                                     <img src="https://bulma.io/images/placeholders/480x480.png">
                                   </figure>
-                            </div>
-                            <div class="column is-4">
+                            </a>
+                            <a class="column is-4" href="">
                                 <figure class="image is-1by1">
                                     <img src="https://bulma.io/images/placeholders/480x480.png">
                                   </figure>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
