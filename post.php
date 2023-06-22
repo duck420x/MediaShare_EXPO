@@ -11,14 +11,12 @@ include_once "config.php";
 
 $title = $_POST['title'];
 $text = $_POST['text'];
-$media = $_POST['pWord'];
+$media = $_POST['media'];
 
 
-
-
-$uName = mysqli_real_escape_string($mysqli, $title);
-$eMail = mysqli_real_escape_string($mysqli, $eMail);
-$hash = mysqli_real_escape_string($mysqli, $hash);
+$title = mysqli_real_escape_string($mysqli, $title);
+$text = mysqli_real_escape_string($mysqli, $eMail);
+$media = mysqli_real_escape_string($mysqli, $media);
 
 $query = "INSERT INTO `Post`(`User_ID`, `Title`, `Text`, `Media`) VALUES (?, ?, ?, ?)";
 $stmt = mysqli_prepare($mysqli, $query);
@@ -29,16 +27,14 @@ if ($stmt) {
 
 	if (mysqli_stmt_affected_rows($stmt) > 0) {
 		mysqli_stmt_close($stmt);
-		echo "Registration is gud boyy";
+		echo "Post posted now do some other shit ";
 		header('Location: ./index.php');
 	} else {
 		mysqli_stmt_close($stmt);
-		echo "uhm yeah thats not good try again pls lol";
+		echo "how did you fuck this up?";
 	}
 
 	mysqli_stmt_close($stmt);
-	
-	
 } else {
 	echo "Bruv what. Error: " . mysqli_error($mysqli);
 }
