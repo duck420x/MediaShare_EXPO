@@ -1,12 +1,19 @@
+<?php
+
+include 'read.php';
+
+$users = getUsers($_POST['search']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Followers</title>
+		<title>Comments</title>
 		<link rel="stylesheet" href="../style/style.css" />
 	</head>
+    
 	<body>
 <!-- NAV-BAR -->
 		<nav class="navbar has-background-light p-1">
@@ -30,7 +37,7 @@
 			<div class="navbar-menu is-12 r-0" id="nav-links">
     <!-- //-- 'start' ipv 'end' is om de 'items' direct naast de logo te krijgen --// -->
 				<div class="navbar-end pr-5">
-					<a href="" class="navbar-item">logOut</a>
+					<a href="" class="navbar-item">LogOut</a>
 				</div>
 			</div>
 		</nav>
@@ -52,10 +59,10 @@
                                   <span>New Post</span>
                                 </a>
                               </span>
-                              <!-- GELINKT WORDEn naar acc -->
-                              <a class="navbar-item" href=" ">
-                                <i class="fa-solid fa-user fa-xl"></i>
-                              </a>
+                              <!-- GELINKT WORDEN naar account -->
+                          <a class="navbar-item" href=" ">
+                            <i class="fa-solid fa-user fa-xl"></i>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -70,61 +77,36 @@
                         <div class='columns is-mobile is-centered'>
                           <div class='column is-12'>
                             <div>
-                              <h1 class='title has-text-black'>Following</h1>
+                              <h1 class='title has-text-black'>Users:</h1>
                               <hr>
                             </div>
                             <table class='table followList'>
-                              <thead>
-                                <tr>
-                                  <th>Your Following:</th>
-                                </tr>
-                              </thead>
                               <tbody class="followUsers">
                                 <tr>
-                                  <td>vilod565</td>
+                                  <td>
+                                    <div class="columns is-12 is-multiline">
+                                        foreach ($users as $user) {
+
+                                            echo $user['GebruikersNaam'] . ' : ';
+
+                                            echo '<form action="follow.php" method="post">';
+
+                                            echo '<button type="submit">Volg</button>';
+
+                                            echo '<input type="hidden" name="account" value="'.$user['id'].'"/>';
+
+                                            echo '</form>';
+
+                                        }  
+                                    </div>
+                                  </td>
                                 </tr>
-                     
-                                <tr>
-                                  <td>deepak123</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>sneha345</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>saimi875</td>
-                                </tr>
-                     
-                                <tr>
-                                </tr>
-                     
-                                <tr>
-                                  <td>riya665</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>raja222</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>kunal456</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>diwakar686</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>nupur898</td>
-                                </tr>
-                              </tbody>
                             </table>
                           </div>
                         </div>
                       </div>
                       <div class="column is-12 flex-dis">
-                        <a href="./viewAccount.html"></a><button class="button">Terug</button>
+                        <button class="button">Terug</button>
                       </div>
                 </div>
             </div>

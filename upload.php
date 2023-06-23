@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Followers</title>
+		<title>Post</title>
 		<link rel="stylesheet" href="../style/style.css" />
 	</head>
 	<body>
@@ -30,7 +30,9 @@
 			<div class="navbar-menu is-12 r-0" id="nav-links">
     <!-- //-- 'start' ipv 'end' is om de 'items' direct naast de logo te krijgen --// -->
 				<div class="navbar-end pr-5">
-					<a href="" class="navbar-item">logOut</a>
+					<a href="" class="navbar-item">pagina1</a>
+					<a href="" class="navbar-item">pagina2</a>
+					<a href="" class="navbar-item">pagina3</a>
 				</div>
 			</div>
 		</nav>
@@ -48,14 +50,13 @@
                       <div id="navbarMenuHeroA" class="navbar-menu">
                         <div class="navbar-end">
                             <span class="navbar-item">
-                                <a class="button is-primary is-inverted" href="./upload.php">
+                                <a class="button is-primary is-inverted">
                                   <span>New Post</span>
                                 </a>
                               </span>
-                              <!-- GELINKT WORDEn naar acc -->
-                              <a class="navbar-item" href=" ">
-                                <i class="fa-solid fa-user fa-xl"></i>
-                              </a>
+                              <a class="navbar-item" href="./ownAccount.html">
+                            <i class="fa-solid fa-user fa-xl"></i>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -64,69 +65,34 @@
             </div>
 			<div class="hero-body" style="padding-top: 2%;margin: 0% 12%;">
                 <!-- BOX-BEGIN -->
+            	<form action="post.php" method="post" enctype="multipart/form-data">
                 <div class="container">
                     <div class="box mt-7">
                       <div class='container'>
                         <div class='columns is-mobile is-centered'>
-                          <div class='column is-12'>
-                            <div>
-                              <h1 class='title has-text-black'>Following</h1>
-                              <hr>
-                            </div>
-                            <table class='table followList'>
-                              <thead>
-                                <tr>
-                                  <th>Your Following:</th>
-                                </tr>
-                              </thead>
-                              <tbody class="followUsers">
-                                <tr>
-                                  <td>vilod565</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>deepak123</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>sneha345</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>saimi875</td>
-                                </tr>
-                     
-                                <tr>
-                                </tr>
-                     
-                                <tr>
-                                  <td>riya665</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>raja222</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>kunal456</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>diwakar686</td>
-                                </tr>
-                     
-                                <tr>
-                                  <td>nupur898</td>
-                                </tr>
-                              </tbody>
-                            </table>
+                          <div class='column is-12 uploadFile'>
+                            <div class="file has-name is-boxed flex-dis is-info">
+                                <label class="file-label">
+                                  <input class="file-input" type="file" name="picture">
+                                  <span class="file-cta">
+                                    <span class="file-icon">
+                                      <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                      Choose a file…
+                                    </span>
+                                  </span>
+                                  <span class="file-name">
+                                    Screen Shot 2017-07-29 at 15.54.25.png
+                                  </span>
+                                </label>
+                              </div>
+                              <button class="button is-primary uploadBTN">upload</button>
                           </div>
                         </div>
                       </div>
-                      <div class="column is-12 flex-dis">
-                        <a href="./viewAccount.html"></a><button class="button">Terug</button>
-                      </div>
                 </div>
+            </form>
             </div>
 		</section>
 		<footer class="footer footer-top">
